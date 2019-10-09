@@ -2,7 +2,7 @@ package Polimorphism;
 
 public class Plant {
 
-    String name= "jakas tam roslina";
+   protected String name= "jakas tam roslina";
 
     public void grow(){
         System.out.println("metoda grow w Plant");
@@ -22,4 +22,8 @@ public class Plant {
         System.out.println(name+": Trace kurwa liście...\n");
     }
 
+
+    public void someMethod(){
+        System.out.println("Doing nothing :D");
+    }
 }

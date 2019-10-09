@@ -14,8 +14,8 @@ public class Acer extends Plant {
         super.fotosynteza();
     }
 
-
-    public void autumnOn(String name) {
+    @Override
+    public void autumnOn() {
 
         super.autumnOn();
     }

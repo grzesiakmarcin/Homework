@@ -20,6 +20,9 @@ public class App {
         // p2.seed(); dziedzieczenie w gore nie dziala->> polimorfizm w jednym kierunku
         o1.seed();
 
+        p3.someMethod();
+        o1.someMethod();
+
 
 
 
