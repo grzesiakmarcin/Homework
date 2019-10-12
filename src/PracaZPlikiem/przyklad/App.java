@@ -7,21 +7,23 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws FileNotFoundException {
 
-
+        String pustyString;
         StringBuilder sb =new StringBuilder();
 
-        String sciezkaPliku = "Test.txt ";
+        String sciezkaPliku = "D:\\Test.txt ";
+
+
 
         File mojPlik = new File (sciezkaPliku);
 
+
+        System.out.println(mojPlik.exists());
         Scanner in = new Scanner (mojPlik);
 
         while(in.hasNextLine()){
-            sb = sb.append(in);
-
+            pustyString = in.nextLine();
+            System.out.println(pustyString);
         }
-//
-//
         in.close();
 
 
