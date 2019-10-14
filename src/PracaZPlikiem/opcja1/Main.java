@@ -1,24 +1,53 @@
 package PracaZPlikiem.opcja1;
 
-import java.io.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        InputStream is;
-        OutputStream os;
+    public static void main(String[] args){
 
-        Reader reader;
-        Writer writer= new FileWriter("mojPlikZTeksterm.txt");
+        String odczytaneZPliku = "";
+        int jakaś_cyfra=0;
 
-        writer.write("To jest moj plik z tekstem");
-        writer.close();
+        File mojPlik = new File ("testik.txt");
 
-        };
+        try {
+            PrintWriter zapisDoPliku = new PrintWriter(mojPlik);
+            zapisDoPliku.println("13. padziernika");
+            //zapisDoPliku.println("13. padziernika");
+
+            zapisDoPliku.println(300);
+            zapisDoPliku.close();
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Nie znaleziono pliku który miał być zapisany %s\n"+ e);
+            e.printStackTrace();
+        }
 
 
-    void nazwaF(InputStream inS){
+
+        try {
+            Scanner odczytZPliku = new Scanner(mojPlik);
+           while(odczytZPliku.hasNext()) {
+              odczytaneZPliku=odczytZPliku.nextLine();
+              jakaś_cyfra= odczytZPliku.nextInt();
+           }
+            odczytZPliku.close();
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Nie udało się odczytać z pliku"+ e);
+            e.printStackTrace();
+        }
+
+        System.out.println(odczytaneZPliku);
+        System.out.println(jakaś_cyfra);
+
 
     }
 
-    }
+}
 
