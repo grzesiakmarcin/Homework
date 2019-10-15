@@ -4,9 +4,10 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Zapis {
+        static String sciezka="";
+        static String sciezka2="";
 
-
-    public static void zapis() throws FileNotFoundException, IOException {
+    public  void zapis() throws FileNotFoundException, IOException {
 
         ArrayList<Student> listaStudentow = new ArrayList<Student>();
 
@@ -28,6 +29,12 @@ public class Zapis {
          */
 
         File mojPlik = new File("listaStudentów.txt");
+        System.out.println(        mojPlik.getCanonicalPath());
+
+
+        sciezka = mojPlik.getCanonicalPath();
+
+
         FileOutputStream streamPliku = new FileOutputStream(mojPlik);
         ObjectOutputStream wlasciwyStream = new ObjectOutputStream(streamPliku);
         for (Student osoba : listaStudentow) {
@@ -36,6 +43,7 @@ public class Zapis {
 
         wlasciwyStream.close();
         streamPliku.close();
+
 
     }
 
