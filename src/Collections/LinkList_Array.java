@@ -1,14 +1,12 @@
 package Collections;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LinkList_Array {
 
     public static void main (String[] args) {
 
-
+        List <String> mojaListaStringow = new ArrayList<String>();
         ArrayList<Integer> mojaArrayLista = new ArrayList<Integer>();
         LinkedList<Integer> mojaLinkLista = new LinkedList<Integer>();
 
@@ -18,6 +16,26 @@ public class LinkList_Array {
 //        for(Integer wartosc : mojaArrayLista){
 //            System.out.println(wartosc);
 //        }
+
+
+        mojaListaStringow.add("Asia");
+        mojaListaStringow.add("Monika");
+        mojaListaStringow.add("Ola");
+        mojaListaStringow.add("Magda");
+
+        mojaListaStringow.add("Helenka");
+        mojaListaStringow.add("Halinka");
+
+        for (String osoby: mojaListaStringow) {
+            System.out.println(osoby);
+            }
+
+        System.out.println("=======================");
+        Collections.sort(mojaLinkLista);
+
+        for (String osoby: mojaListaStringow) {
+            System.out.println(osoby);
+        }
 
 
     }
@@ -48,6 +66,9 @@ public class LinkList_Array {
 
         long stop = System.currentTimeMillis();
         System.out.println("czas " + (stop-start) + "ms dla: " + typ);
+
+
+
 
     }
 }

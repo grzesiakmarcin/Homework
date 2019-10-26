@@ -1,11 +1,13 @@
 package Collections;
+import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+import java.util.Scanner;
 
 public class HashMapa {
     public static void main (String[] args) {
-        java.util.HashMap <Integer, String> mojaHashMapa = new java.util.HashMap<Integer, String>();
-
+        Map <Integer, String> mojaHashMapa = new HashMap<Integer, String>();
         mojaHashMapa.put (1, "łukasz Bacik");
         mojaHashMapa.put (2, "Dagmara Bielnik");
         mojaHashMapa.put (3, "Bartosz Binek");
@@ -13,17 +15,57 @@ public class HashMapa {
         mojaHashMapa.put (5, "Dawid Dylejko");
 
 
-        System.out.println("Poproszę do odpowiedzi nr 5: " + mojaHashMapa.get(5));
+        Scanner  scanner = new Scanner(System.in);
+        int counter=6;
 
-//        for (Map.Entry<Integer, String> klucz : mojaHashMapa.entrySet()){
-//            int klucz = Map.Entry.get.Va
-//            System.out.println(mojaHashMapa.get(klucz));
-//        }
 
-        for(int i=1; i<(mojaHashMapa.size()+1);i++){
-            System.out.println(mojaHashMapa.get(i)); 
 
+        while (true) {
+
+            System.out.println("Podaj imie, podając znaczek \"stop\" aplikacja zatrzyma się ");
+            String imie = scanner.nextLine();
+
+
+            if (imie.equals("stop")) {
+                System.out.println("koniec programu");
+                break;
+
+
+            } else {
+                mojaHashMapa.put(counter, imie);
+                System.out.println("Dodano: " + mojaHashMapa.get(counter));
+                counter++;
+            }
         }
+
+        for (Integer key: mojaHashMapa.keySet()) {
+            String value = mojaHashMapa.get(key);
+            System.out.println(key + ": " + value);
+        }
+
+        Random random = new Random();
+        int randomNumber= random.nextInt((counter-1));
+        System.out.println("Poproszę do odpowiedzi nr : "+randomNumber
+                +". " +mojaHashMapa.get(randomNumber));
+
+
+        System.out.println("Zwracanie klucza i wartosci");
+
+        for (Map.Entry<Integer, String> cosTam : mojaHashMapa.entrySet()) {
+            int klucz = cosTam.getKey();
+            String warosc = cosTam.getValue();
+            System.out.println(klucz + ": " + warosc);
+        }
+            //albo po staremu
+
+
+            System.out.println("==================");
+        for (Map.Entry<Integer, String> cosTam : mojaHashMapa.entrySet()) {
+            System.out.println(cosTam.getKey()+": "+cosTam.getValue());
+        }
+
+
+
 
     }
 }
