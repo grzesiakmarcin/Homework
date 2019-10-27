@@ -19,7 +19,7 @@ public class Plant {
     }
 
     public void autumnOn(){
-        System.out.println(name+": Trace kurwa liście...\n");
+        System.out.println(name+": Tracę kurwa liście...\n");
     }
 
 
