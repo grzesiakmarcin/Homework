@@ -1,5 +1,6 @@
 package Collections.Zadanko;
 
+import java.io.File;
 import java.util.*;
 
 /**
@@ -16,12 +17,18 @@ import java.util.*;
 public class App {
     public static void main (String[] args) {
 
+        File mapa = new File("mapa.txt");
+        StringBuffer sb = new StringBuffer();
+
+
+
+
 
         List<City> listaMiast = new LinkedList<City>();
 
 
         listaMiast.add(new City("Wrocław", 641607, 292.8));
-        //listaMiast.add(new City("Kraków", 771069, 326.85));
+        //listaMiast.add(new City("Kraków", 771069, 326.85)
         //listaMiast.add(new City("Lodz", 682679, 293.25));
         //listaMiast.add(new City("Poznań", 536438, 261.91));
         listaMiast.add(new City("Berlin", 3748148, 891.85));
