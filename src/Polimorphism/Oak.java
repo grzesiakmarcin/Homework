@@ -24,4 +24,10 @@ public class Oak extends Plant {
     public void seed(){
         System.out.println("zrzucam żołędzie :)");
     }
+
+    static int liczba(int liczba){
+
+        return liczba*2;
+    }
+
 }

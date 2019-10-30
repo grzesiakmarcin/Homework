@@ -1,5 +1,7 @@
 package Polimorphism;
 
+import com.sun.xml.internal.ws.addressing.WsaActionUtil;
+
 public class App {
     public static void main(String[] args) {
 
@@ -22,6 +24,9 @@ public class App {
 
         p3.someMethod();
         o1.someMethod();
+        System.out.println(o1.liczba (2));
+        System.out.println();
+
 
 
 
