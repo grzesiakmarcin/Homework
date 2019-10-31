@@ -38,6 +38,8 @@ public class LinkList_Array {
         }
 
 
+
+
     }
 
     private static void zliczaczCzasu (String typ, List<Integer> jakasLista){
