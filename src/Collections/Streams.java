@@ -54,26 +54,34 @@ public class Streams {
             System.out.println(listelements.getKey()+" "+listelements.getValue());
         }
 
-        System.out.println("=================== sortowanie po wartości =======================");
+//        System.out.println("=================== sortowanie po wartości =======================");
 
 //        Map <String, Integer> sortedMap =mountainMap.entrySet()
 //                .stream()
 //                .sorted(Map.Entry.comparingByValue())
 //                .collect(Collector.toMap(Mountain::getName,Mountain::getHight))
-        
+
 // nie działą ;(
 
 
 
         // albo chuj, sortuje i jade w bieszczady:
-        System.out.println("========================= TreeSet======================");
+        System.out.println("========================= TreeMap======================");
+        System.out.println("Po co sie meczyc skoro mamy TreeMap\n");
         TreeMap<String, Integer> selfsortedTreeMap = new TreeMap<>();
 
         selfsortedTreeMap.putAll(mountainMap);
         for (Map.Entry<String, Integer> list: selfsortedTreeMap.entrySet()) {
-            System.out.println(list.getKey() + " "+list.getValue() );
 
+            System.out.println(list.getKey() + " " + list.getValue());
         }
+
+            System.out.println("=================== odwrócony TreeMap =========================");
+            Metodka foo = new Metodka();
+            foo.DifferentMapify(selfsortedTreeMap);
+
+
+
 
     }
 }
@@ -104,4 +112,31 @@ class Mountain {
                 ", wysokość:" + hight +
                 '}';
     }
+
+
+
+}
+class Metodka{
+
+    public Map<Integer, String> DifferentMapify (Map<String,Integer> wstawianaMapa){
+
+        Map <Integer,String> nowaMapa = new TreeMap<>();
+
+        for (Map.Entry<String,Integer> pary:wstawianaMapa.entrySet()) {
+
+            String oldKey=pary.getKey();
+            int oldValue=pary.getValue();
+            nowaMapa.put(oldValue,oldKey);
+        }
+
+        for (Map.Entry<Integer,String> pairs: nowaMapa.entrySet()) {
+            int i = pairs.getKey();
+            String s = pairs.getValue();
+            System.out.println(i+" "+s);
+        }
+
+
+        return nowaMapa;
+    }
+
 }
