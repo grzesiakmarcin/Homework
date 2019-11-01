@@ -1,8 +1,9 @@
 package Collections;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
+import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Streams {
@@ -29,19 +30,50 @@ public class Streams {
                 .filter(b -> b.name.startsWith("M"))
                 .collect(Collectors.toList());
 
-        System.out.println(przefiltrowana);
+        System.out.println("Korona składająca się ze szczytów na literę M:"+przefiltrowana);
 
         List<Mountain> filtrowanie2 = mountainsList
                 .stream()
                 .sorted(Comparator.comparingInt(Mountain::getHight))
                 .collect(Collectors.toList());
 
+        System.out.println("Szczyty rosnąco:");
         for (Mountain gora: filtrowanie2
              ) {
             System.out.println(gora);
-
         }
 
+
+        Map<String,Integer> mountainMap = mountainsList
+                .stream()
+                .collect(Collectors.toMap(Mountain::getName,Mountain::getHight));
+
+
+        System.out.println("================== wypisanie zawartosci mapy =====================");
+        for (Map.Entry<String,Integer> listelements: mountainMap.entrySet()) {
+            System.out.println(listelements.getKey()+" "+listelements.getValue());
+        }
+
+        System.out.println("=================== sortowanie po wartości =======================");
+
+//        Map <String, Integer> sortedMap =mountainMap.entrySet()
+//                .stream()
+//                .sorted(Map.Entry.comparingByValue())
+//                .collect(Collector.toMap(Mountain::getName,Mountain::getHight))
+        
+// nie działą ;(
+
+
+
+        // albo chuj, sortuje i jade w bieszczady:
+        System.out.println("========================= TreeSet======================");
+        TreeMap<String, Integer> selfsortedTreeMap = new TreeMap<>();
+
+        selfsortedTreeMap.putAll(mountainMap);
+        for (Map.Entry<String, Integer> list: selfsortedTreeMap.entrySet()) {
+            System.out.println(list.getKey() + " "+list.getValue() );
+
+        }
 
     }
 }
