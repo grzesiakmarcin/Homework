@@ -2,12 +2,18 @@ package Collections;
 
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Streams {
-    public static void main (String[] args) {
+
+
+
+
+    public static void main (String[] args) throws FileNotFoundException {
 
 
         List<Mountain> mountainsList = new ArrayList<Mountain>();
@@ -31,6 +37,8 @@ public class Streams {
                 .collect(Collectors.toList());
 
         System.out.println("Korona składająca się ze szczytów na literę M:"+przefiltrowana);
+
+
 
         List<Mountain> filtrowanie2 = mountainsList
                 .stream()
@@ -76,9 +84,14 @@ public class Streams {
             System.out.println(list.getKey() + " " + list.getValue());
         }
 
-            System.out.println("=================== odwrócony TreeMap =========================");
-            Metodka foo = new Metodka();
-            foo.DifferentMapify(selfsortedTreeMap);
+        System.out.println("=================== odwrócony TreeMap =========================");
+        Metodka foo = new Metodka();
+        foo.DifferentMapify(selfsortedTreeMap);
+
+        PrintWriter out = new PrintWriter("Lista_8_tysiecznikow.txt");
+        out.print( foo.DifferentMapify(selfsortedTreeMap));
+        out.close();
+
 
 
 

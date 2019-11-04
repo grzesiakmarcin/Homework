@@ -1,0 +1,1 @@
+{8013=Sziszapangma, 8035=Gaszerbrum II , 8051=Broad Peak , 8080=Gaszelbrum I , 8126=Nanga Parbat , 8156=Manaslu , 8201=Czo Oju , 8481=Makalu , 8516=Lhotse, 8586=Kanczendzonga , 8611=K2, 8848=Mount Everest}
