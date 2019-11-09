@@ -23,7 +23,7 @@ Ich użycie, a także budowa jest bardzo podobna do interfejsów, ale zawiera te
 
 Jaka jest więc przewaga klas abstrakcyjnych nad interfejsami, skoro na pierwszy rzut oka nie widać praktycznie żadnych różnic?
 Przede wszystkim tutaj możemy już umieścić jakąś implementację, natomiast klasy rozszerzające będą miały jedynie obowiązek rozbudować
-funkcjonalność poprzez zaimplementowanie metod abstrakcyjnych.
+funkcjonalność poprzez zaimplementowanie metod abstrakcyjnych..
 
 https://javastart.pl/baza-wiedzy/programowanie-obiektowe/klasy-abstrakcyjne
  */
