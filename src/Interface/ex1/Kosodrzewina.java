@@ -19,6 +19,7 @@ public class Kosodrzewina extends DoPrzesadzenia implements AutumnOn {
 
     @Override
     void JanuszWykopuje () {
+        System.out.println("Janusz po wytarganiu z ziemi i wkopaniu w innym miejscu ogrody zapisał się do fizjoterapeuty.");
 
     }
 }
