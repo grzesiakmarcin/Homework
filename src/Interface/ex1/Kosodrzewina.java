@@ -1,6 +1,6 @@
 package Interface.ex1;
 
-public class Kosodrzewina implements AutumnOn {
+public class Kosodrzewina extends DoPrzesadzenia implements AutumnOn {
     public void wzrost (){
         System.out.println("przyrost 0,5 przez całe życie z czego 1m w kłębie");
     }
@@ -14,5 +14,11 @@ public class Kosodrzewina implements AutumnOn {
     @Override
     public void żywicaStop () {
         System.out.println("Zywica stop");
+    }
+
+
+    @Override
+    void JanuszWykopuje () {
+
     }
 }
