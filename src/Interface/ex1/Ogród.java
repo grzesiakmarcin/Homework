@@ -8,18 +8,18 @@ public class Ogród {
         Kosodrzewina kd = new Kosodrzewina();
 
 
-        System.out.println("---------------------Dziedziczenie ----------------------");
+        System.out.println("\n---------------------Dziedziczenie ----------------------");
         sosna.bycieDomem();
 
-        System.out.println("--------------- super + nadpisanie metody-----------------");
+        System.out.println("\n--------------- super + nadpisanie metody-----------------");
         jablon.bycieDomem();
 
-        System.out.println("------------------- nadpisanie metody----------------");
+        System.out.println("\n------------------- nadpisanie metody----------------");
         swierk.bycieDomem();
 
-        System.out.println("------------------ Klasa abstrakcyjna ---------------");
+        System.out.println("\n------------------ Klasa abstrakcyjna ---------------");
         kd.sprawdzamCzyDaSiePrzesadzic();
-        System.out.println("-------------------- implementac interfacu---------------------");
+        System.out.println("\n-------------------- implementac interfacu---------------------");
         kd.żywicaStop();
 
 
