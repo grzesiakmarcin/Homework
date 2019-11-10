@@ -1,4 +1,4 @@
-package others;
+package inheritance.Zadanko1;
 
 public class setters {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ abstract class DoPrzesadzenia {
 
 
     void sprawdzamCzyDaSiePrzesadzic () {
-        System.out.println("Grażyna czai się na implementacje tej rośliny w swoim ogrodzie :)");
+        System.out.println("Grażyna czai się na implementacje tej rośliny w innym miejscu w jej ogrodzie :)");
     }
 
     abstract void JanuszWykopuje ();

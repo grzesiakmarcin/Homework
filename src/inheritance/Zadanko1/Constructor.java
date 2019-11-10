@@ -1,4 +1,4 @@
-package others;
+package inheritance.Zadanko1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ public class Constructor {
         listaAut.add(autko4);
 
 
+
         for (Auto auta :listaAut) {
             System.out.println(auta);
         }
@@ -32,6 +33,9 @@ public class Constructor {
         System.out.println(tir1);
 
         System.out.println(Auto.getCounter());
+
+        Lista_Aut obiektKlasyLista_Aut = new Lista_Aut();
+
 
     }
 }
