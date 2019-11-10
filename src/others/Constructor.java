@@ -36,6 +36,20 @@ public class Constructor {
     }
 }
 
+class Motor {
+    private String marka;
+    private int moc;
+
+
+    public Motor(){
+    }
+
+    public Motor (String marka, int moc){
+        this.marka= marka;
+        this.moc=moc;
+    }
+}
+
 
 class Auto {
     private String marka;
