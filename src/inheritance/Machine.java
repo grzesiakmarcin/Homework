@@ -2,6 +2,9 @@ package inheritance;
 
 public class Machine {
 
+    private  String engineType = "Diesel";
+    private  String engineType2 = "Petrol";
+
     public void start(String jakiObiekt){
 
         System.out.println("Przekrecamy kluczyc w stacyjce");
@@ -14,7 +17,11 @@ public class Machine {
     }
 
 
+    public String getEngineType() {
+        return engineType;
+    }
 
-
-
+    public String getEngineType2() {
+        return engineType2;
+    }
 }

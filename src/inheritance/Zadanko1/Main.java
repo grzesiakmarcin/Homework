@@ -3,7 +3,7 @@ package inheritance.Zadanko1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Constructor {
+public class Main {
     public static void main(String[] args) {
 
         Auto autko1 = new Auto("Mercedes", "kombi",149);
