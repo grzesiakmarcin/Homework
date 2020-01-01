@@ -1,5 +1,7 @@
 package Strings;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,6 +9,7 @@ public class Main {
         String string2 = "         Himalaje są daleko      .               ";
         String string3 = "Ucze się Javy";
         String string4 = "WIADOMOŚCI";
+        String andrzej = "Pan Andrzej ma na imie Przemek i pochodzi z wielkopolski";
 
 
 
@@ -24,10 +27,13 @@ public class Main {
 
         //isEmpty
         System.out.println("is Empty  ----->"+ string1.isEmpty());
+
         //length
         System.out.println("------> length "+ string2.length());
+
         //charAt   zwraca nam znak który jest pod danym indeksem
         System.out.println("charAt -----> "+string3.charAt(7));
+
         //toCharArray
         char[] tablicaZnakow = string3.toCharArray();
         for (char znak :tablicaZnakow) {
@@ -37,12 +43,54 @@ public class Main {
 
         //substring
         System.out.println("substring -----> "+ string4.substring(6,10));
-        //
-        System.out.println("------>");
-        //k
-        System.out.println(" ----->");
-        //
-        System.out.println("------>");
+        String osci=string4.substring(6,10);
+
+
+
+        //SubSequence - robi dokladnie to samo ale z ta roznicą, że zrzuca cos to sekwencji Charów
+        CharSequence SubString = string3.subSequence(1,5);
+
+        System.out.println("------>SubSequence" + SubString);
+
+
+        //STRING SPLIT
+        System.out.println(" ----->STRING SPLIT  <------------");
+
+        String[] split1 = string2.split("",5);
+        for (String stringus:split1) {
+            System.out.println(stringus);
+        }
+
+        String[] himalajesadaleko = string2.split("");
+        System.out.println(himalajesadaleko.length);
+
+
+        String[] panAndrzej=andrzej.split(" ");
+        System.out.println(panAndrzej.length);
+
+
+
+        String[] panAndrzejLimit=andrzej.split("");
+        System.out.println(panAndrzejLimit.length + " a ponizej wypisanie dokladnie tego co znajduje sie w tablicy");
+        for (String cosik: panAndrzejLimit) {
+            System.out.println(cosik+", ");
+        }
+
+        //replace
+
+        String andrzej2=andrzej.replace("Andrzej", "Paweł");
+        System.out.println(andrzej2);
+        andrzej2=andrzej2.replace("Paweł", "123");
+        andrzej2=andrzej2.replaceAll("[0-9]","Szymon ");
+        System.out.println(andrzej2);
+
+        System.out.println(string1.indexOf("Q"));
+
+
+        //equals
+        System.out.println(andrzej.equalsIgnoreCase(andrzej2));  // ignoruje wielkość znaków
+
+
     }
 
 
